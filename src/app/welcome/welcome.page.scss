@@ -1,0 +1,26 @@
+
+ion-row {
+    ion-img {
+        height: 350px;
+        width: 250px;
+    }
+}
+
+.logo {
+    margin: auto;
+    margin-left: 50px;
+    margin-bottom: -150px;
+}
+.authButton {
+    transform: translateY(35vh);
+    ion-button {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 3vh;  
+        ion-text {
+            font-size: 0.9em;
+            text-transform: none;
+        }              
+    }
+}
+    

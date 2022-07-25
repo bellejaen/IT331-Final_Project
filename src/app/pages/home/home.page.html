@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search" class="searchbar"></ion-searchbar>
+    <ion-icon name="chatbubbles-outline" class="msg" (click)="message()"></ion-icon>
+  <ion-buttons slot="start">
+    <ion-menu-button menu="main-menu" class="menuIcon">
+
+    </ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div>
+    <ion-card class="card1">
+      <ion-card-header>
+        <ion-card-subtitle class="missing">Missing Person</ion-card-subtitle>
+        <ion-card-title>John Zoldyck</ion-card-title>
+        <img class="pic1" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcrwMvUgClCnBNDMfiBcopM8BgT74epXtu0g&usqp=CAU">
+      </ion-card-header>
+      
+      <ion-card-content>
+        Zoldyck has ties to Chicago, Illinois, and Guadalajara, Mexico, where he was last seen. 
+        <a (click)="dtls()">see more</a>
+      </ion-card-content>
+    </ion-card>
+  </div>
+        
+  <div>
+    <ion-card class="card2">
+      <ion-card-header>
+        <ion-card-subtitle class="missing">Missing Pet</ion-card-subtitle>
+        <ion-card-title>Chopper</ion-card-title>
+        <img class="pic2" src="https://feistyfeathers.files.wordpress.com/2019/06/44a.jpg?fbclid=IwAR3dkAX6A7tvn1D-lZULZ1Xv8pddJdrz_FP5iPAQB1ByCdPGjwPc7oW6CzA" >
+      </ion-card-header>
+      
+      <ion-card-content>
+        DESCRIPTION
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

@@ -1,0 +1,205 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+     Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-segment [(ngModel)]="selectTabs">
+   <ion-segment-button value="people">
+     <ion-label>People</ion-label>
+   </ion-segment-button>
+   <ion-segment-button value="pet">
+     <ion-label>Pet</ion-label>
+   </ion-segment-button>
+  </ion-segment>
+
+  <div *ngIf="selectTabs == 'people' ">
+
+   <ion-card>
+    <ion-card-header class="clss1"> DESCRIPTION:</ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="clss2">
+        <ion-label position="floating">Name:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="clss2">
+        <ion-label position="floating">Aliases:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="clss2">
+        <ion-label position="floating">Date(s) of Birth Used:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="clss2">
+        <ion-label position="floating">Age:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="clss2">
+        <ion-label position="floating">Hair:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item class="clss2">
+        <ion-label position="floating">Eyes:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Height:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Weight:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Sex:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Ethnicity:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Occupation:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Nationality:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Scars and Marks:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Reward: (If any):
+        </ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Missing From:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Missing Since:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label position="floating">Field office and contacts:</ion-label>
+        <ion-input input type="text"></ion-input>
+      </ion-item>
+      <ion-button class="btn" color="secondary">SUBMIT</ion-button>
+    </ion-card-content>
+  </ion-card> 
+  </div>
+
+  <div *ngIf="selectTabs == 'pet' ">
+   <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Name:</ion-label>
+        <ion-input type="text"></ion-input> 
+      </ion-item>
+    </ion-card-content>
+
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Gender:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Breed:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Color:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+
+        </ion-row>
+        </ion-grid>  
+    </ion-card-content>
+  
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Details:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+   
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Missing since:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Area last seen:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item> 
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label position="floating">Field office and contacts:</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+        <ion-button class="btn" color="secondary">SUBMIT</ion-button>
+    </ion-card-content>
+   </ion-card>
+  </div>
+</ion-content>

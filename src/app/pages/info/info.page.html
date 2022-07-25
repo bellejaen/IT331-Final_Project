@@ -1,0 +1,30 @@
+<!--
+<ion-toolbar>
+  <ion-searchbar placeholder="Search" class="searchbar"></ion-searchbar>
+  <ion-icon name="chatbubbles-outline" class="msg" (click)="message()"></ion-icon>
+</ion-toolbar> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-searchbar placeholder="Search" [(ngModel)]="searchTerm" class="searchbar"></ion-searchbar>
+    <ion-icon name="chatbubbles-outline" class="msg" (click)="message()"></ion-icon>
+    <!--
+    <ion-title>
+     <h3>List of Police Stations</h3>
+    </ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      This are the list of police stations in Batangas Province with its contacts.
+    </ion-card-content>
+  </ion-card>
+  <ion-list>
+    <ion-item *ngFor="let station of stations | filter:searchTerm">
+      <ion-label>{{station.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

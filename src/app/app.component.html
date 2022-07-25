@@ -1,3 +1,46 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu menuId="main-menu" contentId="main">
+    <ion-content>
+      <div class="menu-header-bg"></div>
+      <div class="header-content">
+        <img src="https://cdn.icon-icons.com/icons2/2859/PNG/512/avatar_face_man_boy_profile_smiley_happy_people_icon_181659.png" alt="">
+        <ion-label>
+          <h2>Josh Montebon</h2>
+          <p>User</p>
+        </ion-label>
+      </div>
+      <div class="action-button">
+        <ion-menu-toggle>
+          <ion-button routerLink="/home/report">
+            <ion-icon name="add-outline"></ion-icon>Report
+          </ion-button>
+        </ion-menu-toggle>
+      </div>
+
+      <ion-list class="menu-items" lines="none">
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="pie-chart-outline" slot="start"></ion-icon>
+            <ion-label>Dashboard</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle >
+          <ion-item class="active" routerLink="/home/message">
+            <ion-icon name="chatbubble-ellipses-outline" slot="start"></ion-icon>
+            <ion-label>Messages</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/welcome/sign-in">
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Sign out</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>

@@ -1,0 +1,141 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="ion-padding">
+    <ion-title>Chaatt</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="tabs ion-padding">
+  <ion-segment value="chats" (ionchange)="segmentChange($event)">
+    <ion-segment-button value="chats">
+      <ion-label>Chats</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="calls">
+      <ion-label>Calls</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  </div>
+  <div class="chat-list" *ngIf="activeTab == 'chats'">
+    <div class="recent-chats ion-padding">
+      <div class="heading">
+        <h1>Recent Chats</h1>
+        <ion-icon name="search-sharp"></ion-icon>
+      </div>
+      <div class="chats">
+        <ion-item lines="none" routerLink="/conversation-page">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Josh</h2>
+            <p>Typing...</p>
+          </ion-label>
+          <div class="info-div">
+            <p>2:13</p>
+          </div>
+        </ion-item>
+        <ion-item lines="none" routerLink="/conversation-page">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Mom</h2>
+            <p>Don't forget to use you mask</p>
+          </ion-label>
+          <div class="info-div">
+            <ion-badge>1</ion-badge>
+            <p>4:10</p>
+          </div>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Victoria</h2>
+            <p>Wait for a minute</p>
+          </ion-label>
+          <div class="info-div">
+            <ion-icon name="checkmark-done-outline"></ion-icon>
+            <p>6:30</p>
+          </div>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Ben</h2>
+            <p>Bye</p>
+          </ion-label>
+          <div class="info-div">
+            <ion-badge>1</ion-badge>
+            <p>7:10</p>
+          </div>
+        </ion-item>
+      </div>
+    </div>
+    <div class="all-chats ion-padding">
+      <div class="heading">
+        <h1>All Chats</h1>
+        <ion-icon name="search-sharp"></ion-icon>
+      </div>
+      <div class="chats">
+        <ion-item lines="none">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Josh</h2>
+            <p>Typing...</p>
+          </ion-label>
+          <div class="info-div">
+            <p>2:13</p>
+          </div>
+        </ion-item>
+        <ion-item lines="none"> <!--routerLink="/conversation-page"-->
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Mom</h2>
+            <p>Don't forget to use you mask</p>
+          </ion-label>
+          <div class="info-div">
+            <ion-badge>1</ion-badge>
+            <p>4:10</p>
+          </div>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Victoria</h2>
+            <p>Wait for a minute</p>
+          </ion-label>
+          <div class="info-div">
+            <ion-icon name="checkmark-done-outline"></ion-icon>
+            <p>6:30</p>
+          </div>
+        </ion-item>
+        <ion-item lines="none">
+          <ion-avatar>
+            <img src="https://icon-library.com/images/boy_child_school_boy_student-512.png" alt="">
+          </ion-avatar>
+          <ion-label class="ion-text-nowrap">
+            <h2>Ben</h2>
+            <p>Bye</p>
+          </ion-label>
+          <div class="info-div">
+            <ion-badge>1</ion-badge>
+            <p>7:10</p>
+          </div>
+        </ion-item>
+      </div>
+    </div>
+  </div>
+  <ion-fab-button>
+    <ion-icon name="chatbox-ellipses-outline"></ion-icon>
+  </ion-fab-button>
+</ion-content>

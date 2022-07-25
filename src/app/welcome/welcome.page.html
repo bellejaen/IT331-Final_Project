@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+ 
+  <ion-grid>
+    <ion-row class="logo">
+      <ion-col>
+        <ion-img src="assets/images/RBGlogo.png"></ion-img>
+      </ion-col>
+    </ion-row>
+    <div class="authButton">
+      <ion-button size="large" expand="block" shape="round" color="primary"
+        routerLink="/welcome/sign-up">
+        <ion-text color="white">Sign up</ion-text>
+      </ion-button>
+      <ion-button size="large" expand="block" shape="round" fill="outline" color="primary" 
+        routerLink="/welcome/sign-in">
+        <ion-text color="primary">Sign in</ion-text>
+      </ion-button> 
+    </div>
+  </ion-grid>
+</ion-content>
