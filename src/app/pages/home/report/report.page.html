@@ -23,88 +23,131 @@
 
     <ion-card-content>
       <ion-item class="clss2">
-        <ion-label position="floating">Name:</ion-label>
+        <ion-label position="fixed">Name:</ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
 
-      <ion-item class="clss2">
-        <ion-label position="floating">Aliases:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item class="clss2">
+                <ion-label >Aliases:</ion-label>
+                <ion-input input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item>
+                <ion-label>Sex:</ion-label>
+                <ion-select>
+                  <ion-select-option value="F">Female</ion-select-option>
+                  <ion-select-option value="M">Male</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-      <ion-item class="clss2">
-        <ion-label position="floating">Date(s) of Birth Used:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
+     
 
-      <ion-item class="clss2">
-        <ion-label position="floating">Age:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item class="clss2">
+                <ion-label>DOB:</ion-label>
+                <ion-input input type="text" placeholder="mm/dd/yyyy"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item class="clss2">
+                <ion-label >Age:</ion-label>
+                <ion-input input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>  
 
-      <ion-item class="clss2">
-        <ion-label position="floating">Hair:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item class="clss2">
+                <ion-label>Hair:</ion-label>
+                <ion-input input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item class="clss2">
+                <ion-label>Eyes:</ion-label>
+                <ion-input input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-item >
+                <ion-label>Height:</ion-label>
+                <ion-input input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-item >
+                <ion-label>Weight:</ion-label>
+                <ion-input input type="text"></ion-input>
+              </ion-item>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
 
-      <ion-item class="clss2">
-        <ion-label position="floating">Eyes:</ion-label>
+
+
+     
+
+      <ion-item >
+        <ion-label>Nationality:</ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
 
       <ion-item >
-        <ion-label position="floating">Height:</ion-label>
+        <ion-label>Scars and Marks:</ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
 
       <ion-item >
-        <ion-label position="floating">Weight:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item >
-        <ion-label position="floating">Sex:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item >
-        <ion-label position="floating">Ethnicity:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item >
-        <ion-label position="floating">Occupation:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item >
-        <ion-label position="floating">Nationality:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item >
-        <ion-label position="floating">Scars and Marks:</ion-label>
-        <ion-input input type="text"></ion-input>
-      </ion-item>
-
-      <ion-item >
-        <ion-label position="floating">Reward: (If any):
+        <ion-label>Reward: (If any):
         </ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
 
       <ion-item >
-        <ion-label position="floating">Missing From:</ion-label>
+        <ion-label>Remarks:</ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
 
       <ion-item >
-        <ion-label position="floating">Missing Since:</ion-label>
+        <ion-label>Details:</ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
 
       <ion-item >
-        <ion-label position="floating">Field office and contacts:</ion-label>
+        <ion-label>Field office and contacts:</ion-label>
         <ion-input input type="text"></ion-input>
       </ion-item>
       <ion-button class="btn" color="secondary">SUBMIT</ion-button>
@@ -116,7 +159,7 @@
    <ion-card>
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating">Name:</ion-label>
+        <ion-label>Name:</ion-label>
         <ion-input type="text"></ion-input> 
       </ion-item>
     </ion-card-content>
@@ -127,7 +170,7 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Gender:</ion-label>
+                <ion-label>Gender:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item>
             </div>
@@ -135,7 +178,7 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Breed:</ion-label>
+                <ion-label>Breed:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item>
             </div>
@@ -143,12 +186,11 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Color:</ion-label>
+                <ion-label>Color:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item>
             </div>
           </ion-col>
-
         </ion-row>
         </ion-grid>  
     </ion-card-content>
@@ -159,7 +201,7 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Details:</ion-label>
+                <ion-label>Details:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item>
             </div>
@@ -174,7 +216,7 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Missing since:</ion-label>
+                <ion-label>Missing since:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item>
             </div>
@@ -183,7 +225,7 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Area last seen:</ion-label>
+                <ion-label>Area last seen:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item> 
             </div>
@@ -191,7 +233,7 @@
           <ion-col>
             <div>
               <ion-item>
-                <ion-label position="floating">Field office and contacts:</ion-label>
+                <ion-label>Field office and contacts:</ion-label>
                 <ion-input type="text"></ion-input>
               </ion-item>
             </div>
