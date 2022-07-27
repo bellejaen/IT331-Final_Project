@@ -9,9 +9,7 @@ export class MessagePage implements OnInit {
   activeTab: string = 'chats'
   constructor() { }
 
-  segmentChange(e){
-    this.activeTab = e.target.value;
-  }
+ 
   ngOnInit() {
   }
 

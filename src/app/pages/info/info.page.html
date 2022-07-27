@@ -5,9 +5,9 @@
 </ion-toolbar> -->
 
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-searchbar placeholder="Search" [(ngModel)]="searchTerm" class="searchbar"></ion-searchbar>
-    <ion-icon name="chatbubbles-outline" class="msg" (click)="message()"></ion-icon>
+  <ion-toolbar class="header-bg">
+    <ion-searchbar placeholder="Search" [(ngModel)]="searchTerm" class="searchbar" color="white"></ion-searchbar>
+    <ion-icon name="chatbubbles-outline" class="msg" (click)="message()" color="white"></ion-icon>
     <!--
     <ion-title>
      <h3>List of Police Stations</h3>
@@ -26,5 +26,4 @@
       <ion-label>{{station.name}}</ion-label>
     </ion-item>
   </ion-list>
-
 </ion-content>

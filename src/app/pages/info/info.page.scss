@@ -1,19 +1,22 @@
 .searchbar {
-    display: inline-block;
-    vertical-align: middle;
-    margin-top: 10px;
-    width: 320px;
-  }
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+  width: 320px;
+}
   
-  .msg {
-    vertical-align: middle;
-    font-size: 25px;
-    margin-bottom: 5px;
-    display: inline-block;
-    color: #cc4510;
-  }
+.msg {
+  vertical-align: middle;
+  font-size: 25px;
+  margin-bottom: 5px;
+  display: inline-block;
+  color: #cc4510;
+}
 
-  h3{
+h3{
+  text-align: left;
+}
 
-    text-align: left;
-  }
+.header-bg{
+  --background: linear-gradient(90deg, #cf3653 0%, #e8233e 100%);
+}
