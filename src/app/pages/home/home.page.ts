@@ -16,6 +16,9 @@ export class HomePage implements OnInit {
   dtls() {
     this.route.navigate(['/home/dtls']);
   }
+  petdtls() {
+    this.route.navigate(['/home/pet-details']);
+  }
   message() {
     this.route.navigate(['/home/message']);
   }

@@ -44,6 +44,15 @@ const routes: Routes = [
         ] 
       },
       {
+        path:'pet-details',
+        children: [
+          {
+            path:'',
+            loadChildren: () => import('../pages//home/pet-details/pet-details.module').then(m => m.PetDetailsPageModule)
+          }
+        ] 
+      },
+      {
         path:'message',
         children: [
           {

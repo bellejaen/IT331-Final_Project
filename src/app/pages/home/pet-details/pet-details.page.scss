@@ -1,0 +1,68 @@
+.header-bg{
+    --background: linear-gradient(90deg, #cf3653 0%, #e8233e 100%);
+  }
+ion-back-button{
+    margin-left: -20px;
+}
+.titlePetFullDetails {
+    font-size: 25px;
+    text-align: left;
+    margin: auto;
+    margin-left: -40px;
+}
+
+ion-slides {
+    height: 100%;
+    .swiper-slide {
+      display: block;
+    }
+    
+    .swiper-slide h2 {
+      margin-top: 2.8rem;
+    }
+    
+    .swiper-slide img {
+      max-height: 50%;
+      max-width: 80%;
+      margin: 60px 0 40px;
+      pointer-events: none;
+    }
+    b {
+      font-weight: 500;
+    }
+    
+    p {
+      padding: 0 40px;
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--ion-color-step-600, #60646b);
+    }
+    
+    p b {
+      color: var(--ion-text-color, #000000);
+    }
+    
+    .pic1 {
+      width: 120px;
+      display: block;
+    }
+  }
+
+  ion-col {
+  text-align: left;
+}
+
+.poster1{
+    margin-left: -10px;
+    margin-right: 10px; 
+    margin-top: -10px;
+    margin-bottom: -50px;
+    width: 800px;
+    height: 600px;
+  }
+  
+  .btnPrint{
+    width: 100px;
+    float: right;
+    margin-right: 15px;
+  }
