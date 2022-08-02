@@ -18,27 +18,36 @@
       </div>
 
       <ion-list class="menu-items" lines="none">
+
+        <!--
         <ion-menu-toggle>
           <ion-item>
             <ion-icon name="pie-chart-outline" slot="start"></ion-icon>
             <ion-label>Dashboard</ion-label>
           </ion-item>
-        </ion-menu-toggle>
+        </ion-menu-toggle> -->
 
-        <ion-menu-toggle >
-          <ion-item class="active" routerLink="/home/message">
+        <ion-menu-toggle routerLink="/home/message">
+          <ion-item class="active" >
             <ion-icon name="chatbubble-ellipses-outline" slot="start"></ion-icon>
             <ion-label>Messages</ion-label>
           </ion-item>
         </ion-menu-toggle>
 
-        <ion-menu-toggle>
+      <!--  <ion-menu-toggle>
           <ion-item routerLink="/welcome/sign-in">
             <ion-icon name="log-out-outline" slot="start"></ion-icon>
             <ion-label>Sign out</ion-label>
           </ion-item>
-        </ion-menu-toggle>
+        </ion-menu-toggle>-->
 
+        <ion-menu-toggle>
+          <ion-item (click)="signOut()">
+            <ion-icon name="log-out-outline" slot="start"></ion-icon>
+            <ion-label>Sign out</ion-label>
+          </ion-item>
+          <!--<ion-button type="submit" color="danger" expand="block" (click)="signOut()">Signout</ion-button>-->
+        </ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

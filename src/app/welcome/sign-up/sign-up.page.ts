@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators,FormBuilder } from '@angular/forms';
+import { Router } from "@angular/router";
+import { IonicAuthService } from '../../ionic-auth.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,29 +10,66 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SignUpPage implements OnInit {
 
-  form: FormGroup;
+  userForm: FormGroup;
+  successMsg: string = '';
+  errorMsg: string = '';
 
-  constructor() { 
-    this.initForm();
+  error_msg = {
+    'email': [
+      { 
+        type: 'required', 
+        message: 'Provide email.' 
+      },
+      { 
+        type: 'pattern', 
+        message: 'Email is not valid.' 
+      }
+    ],
+    'password': [
+      { 
+        type: 'required', 
+        message: 'Password is required.' 
+      },
+      { 
+        type: 'minlength', 
+        message: 'Password length should be 6 characters long.' 
+      }
+    ]
+  };
+
+  constructor(
+    private router: Router,
+    private ionicAuthService: IonicAuthService,
+    private fb: FormBuilder
+  ) { 
+    //this.initForm();
   }
 
   ngOnInit() {
-  }
-
-  initForm() {
-    this.form = new FormGroup({
-      name: new FormControl(null, {validators: [Validators.required]}),
-      email: new FormControl(null, {validators: [Validators.required, Validators.email]}),
-      password: new FormControl(null, {validators: [Validators.required, Validators.minLength(8)]}),
+    this.userForm = this.fb.group({
+      email: new FormControl('', Validators.compose([
+        Validators.required,
+        Validators.pattern('^[a-zA-Z0-9.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$')
+      ])),
+      password: new FormControl('', Validators.compose([
+        Validators.minLength(6),
+        Validators.required
+      ])),
     });
   }
 
-  onSubmit() {
-    if(!this.form.valid) {
-      this.form.markAllAsTouched();
-      return;
-    }
-    console.log(this.form.value);
+  goTosignUp(value) {
+    this.ionicAuthService.createUser(value)
+      .then((response) => {
+        this.errorMsg = "";
+        this.successMsg = "New user created.";
+      }, error => {
+        this.errorMsg = error.message;
+        this.successMsg = "";
+      })
   }
 
+  goToLogin() {
+    this.router.navigateByUrl('sign-in');
+  }
 }

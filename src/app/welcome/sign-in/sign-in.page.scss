@@ -11,6 +11,7 @@ ion-content {
             width: 130px;
             margin-left: 85px;
             margin-bottom: 2vh;
+            margin-top: -30px;
         }
     }
     .logo {
@@ -19,6 +20,7 @@ ion-content {
 }
 
 ion-footer {
+    margin-top: -65px;
     ion-list {
         border-radius: 40px 40px 0 0;
         margin-bottom: -5px;
@@ -61,3 +63,11 @@ ion-footer {
         }
     }
 }
+
+ion-text-center {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 107px;
+  }

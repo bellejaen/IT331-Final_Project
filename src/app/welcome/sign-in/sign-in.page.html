@@ -1,5 +1,6 @@
 <ion-content [fullscreen]="true">
-
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  
   <ion-header class="ion-no-border">
     <ion-toolbar>
       <ion-buttons slot="start">
@@ -13,7 +14,6 @@
       <ion-img src="assets/images/flogo.png"></ion-img>
     </ion-col>
   </ion-row>
-
 </ion-content>
 
 <ion-footer>
@@ -25,7 +25,12 @@
     </ion-list-header>
 
     <ion-item-group class="ion-margin-horizontal">
-      <form [formGroup]="form">
+      <form [formGroup]="userForm" (ngSubmit)="goTosignIn(userForm.value)">
+
+        <div class="w3-panel w3-red">
+          <label class="ion-text-center" color="danger">{{errorMsg}}</label>
+        </div>
+
         <div class="ion-margin-vertical">
           <ion-item>
             <ion-label position="stacked">Email</ion-label>
@@ -34,13 +39,9 @@
             </ion-input>
           </ion-item>
           <ion-text class="error" color="danger" 
-            *ngIf="!form.get('email').valid && form.get('email').touched">
-            <ion-text *ngIf="form.get('email').hasError('required')">
-              * Please enter your Email Address
-            </ion-text>
-            <ion-text 
-              *ngIf="!form.get('email').hasError('required') && form.get('email').hasError('email')">
-              * Please enter proper Email Address
+          *ngFor="let error of error_msg?.email">
+            <ion-text *ngIf="userForm.get('email').hasError(error.type) && (userForm.get('email').dirty || userForm.get('email').touched)">
+              {{ error.message }}
             </ion-text>
           </ion-text>
         </div>
@@ -48,30 +49,25 @@
         <div class="ion-margin-vertical">
           <ion-item>
             <ion-label position="stacked">Password</ion-label>
-            <ion-input formControlName="password" type="password" placeholder="Password">
+            <ion-input formControlName="password" type="password" placeholder="Password" required>
               <ion-icon name="key" color="medium" slot="start"></ion-icon>
             </ion-input>
           </ion-item>
-          <ion-text class="error" color="danger" *ngIf="!form.get('password').valid && form.get('password').touched">
-            <ion-text *ngIf="form.get('password').hasError('required')">
-              * Please enter your Password
-            </ion-text>
-            <ion-text *ngIf="!form.get('password').hasError('required') && form.get('password').hasError('minlength')">
-              * Password must be of atleast 8 characters
+          <ion-text class="error" color="danger" *ngFor="let error of error_msg?.password">
+            <ion-text *ngIf="userForm.get('password').hasError(error.type) && (userForm.get('password').dirty || userForm.get('password').touched)">
+              {{ error.message }}
             </ion-text>
           </ion-text>
         </div>
 
         <p class="ion-text-right"><ion-text color="primary">Forgot Password?</ion-text></p>
 
-        <ion-button 
-          size="large" 
-          expand="block" 
-          shape="round" 
-          color="primary" 
-          routerLink="/home">
+        <ion-button type="submit" size="large" expand="block" shape="round" color="primary" [disabled]="!userForm.valid" >
           <ion-text color="white">Sign in</ion-text>
         </ion-button>
+
+        
+
       </form>
     </ion-item-group>
   </ion-list>

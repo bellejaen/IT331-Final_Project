@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from "@angular/router";
+import { IonicAuthService } from '../app/ionic-auth.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,16 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private router: Router, private ionicAuthService: IonicAuthService) {}
+
+  signOut() {
+    this.ionicAuthService.signoutUser()
+      .then(res => {
+        this.router.navigateByUrl('/welcome/sign-in');
+      })
+      .catch(error => {
+        console.log(error);
+      })
+  }
+  
 }
